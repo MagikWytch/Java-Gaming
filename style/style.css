@@ -3,6 +3,8 @@
 body{	
 	font-family: gruppo;
 
+	margin: 0;
+
 }
 
 main{
@@ -112,12 +114,61 @@ main{
 
 }
 
+.contentBackground{
+
+
+
+
+}
+
 footer{	
 	display: flex;
+	justify-content: center;
 	background-color: #474747;
 
 	color: white;
 
+	
+}
+
+.footerColumns{
+	flex: 1;
+	text-align: center;
+
+
+
+}
+
+.footerColumns ul{
+
+	list-style: none;
+
+
+}
+
+.footerColumns li{
+
+	color: white;
+
+
+
+}
+.footerColumns a{
+
+	text-decoration: none;
+
+}
+
+.footerColumns li:hover{
+
+	color: black;
+
+}
+
+.footerColumns h4{
+
+	position: relative;
+	left: 20px;
 
 }
 
