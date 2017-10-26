@@ -142,22 +142,15 @@ footer{
 }
 
 .footerColumns li{
-
 	color: white;
-
-
-
 }
+
 .footerColumns a{
-
 	text-decoration: none;
-
 }
 
 .footerColumns li:hover{
-
 	color: black;
-
 }
 
 .footerColumns h4{
@@ -165,4 +158,8 @@ footer{
 	position: relative;
 	left: 20px;
 
+}
+
+footer img{
+	height:20px;
 }
