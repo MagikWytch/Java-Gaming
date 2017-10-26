@@ -5,6 +5,85 @@ body{
 
 }
 
+.header{
+	display: flex;
+	background-color: #474747;
+
+	
+}
+
+.header img{
+
+	height: 70px;
+
+}
+
+.headerLogo{
+
+	flex: 2;
+
+
+}
+
+.headerButtons{
+	flex: 1;
+
+	background-color: white;
+
+}
+
+.headerCheckout{
+
+	flex: 1;
+}
+
+.headerButtons ul{
+
+	display: flex;
+
+	justify-content: center;
+
+	justify-content: space-around;
+
+	list-style: none;
+
+	margin-right: 33px;
+
+
+
+}
+
+.headerButtons li{
+	
+	padding: 15px;
+
+	border-radius: 8px;
+
+	background-color: #474747;
+
+	width: 100px;
+
+	text-align: center;
+
+
+
+
+
+	}
+
+.headerButtons a{
+	color: white;
+
+
+	text-decoration: none;
+
+}
+
+.headerCheckout{
+
+	text-align: center;
+}
+
 footer{	
 
 }
