@@ -1,0 +1,36 @@
+/* ContactForms */
+
+#formMain{
+	margin-left:30%;
+	padding-top:5%;
+	padding-bottom:5%;
+}
+
+form {
+  background-color:grey;
+  width:40%;
+  color:white;
+	border-radius: 15px;
+	min-width:400px;
+}
+
+table{
+  width:100%;
+  padding:40px;
+}
+
+input[type=text],input[type=email], textarea {
+  width:100%;
+  border-radius: 5px;
+  border-style: groove;
+  resize:vertical;
+  padding:10px;
+}
+
+input[type=submit]{
+  float:right;
+  border-radius:5px;
+  background-color: #a3c2c2;
+  color:white;
+  text-shadow: 2px 2px 4px #000000;
+}
