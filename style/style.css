@@ -3,10 +3,9 @@ body {
     font-family: gruppo;
     background-color: #e0e0e0;
     margin: 8px;
-    color:white;
 }
 
-a {
+.header a, footer a {
 	text-decoration: none;
 	color:white;
 }
@@ -88,6 +87,7 @@ footer {
     display: flex;
     justify-content: center;
     background-color: #474747;
+
 }
 
 .footerColumns {
