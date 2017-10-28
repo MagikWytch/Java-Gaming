@@ -41,10 +41,9 @@ ul{
   border-radius: 5%;
   background-color: grey;
   text-align: center;
-  font-size:1.3em;
-  width: 20%;
-  margin-top:5%;
-  padding: 10%;
+  font-size:20px;
+  width: 50%;
+  padding: 5%;
 }
 
 /* HEADER */

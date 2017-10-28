@@ -1,9 +1,9 @@
 /* ContactForms */
 
-#formMain{
-	margin-left:30%;
-	padding-top:5%;
-	padding-bottom:5%;
+#contentBackground{
+  display: flex;
+  justify-content: space-around;
+  padding:5% 0;
 }
 
 form {
@@ -12,6 +12,7 @@ form {
 	border-radius: 15px;
 	min-width:400px;
 }
+
 
 table{
   width:100%;
