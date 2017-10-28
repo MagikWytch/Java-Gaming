@@ -2,10 +2,9 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<meta name="description" content="Games made in Java">
+	<meta name="description" content="Vi specialiserar oss på att sälja spel skrivna i Java! Kom hit och fynda! Alltid kampanjer igång!">
 	<meta name="keywords" content="games,java,gamers,blog,blogg,spel">
 	<meta name="author" content="SuperMarkUpGroup SMUG">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 	<link rel="stylesheet" type="text/css" href="style/styleforms.css">
 	<link href='https://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet'>
@@ -56,7 +55,7 @@
 <main>
 
 	<section  id="formMain">
-		<form>
+		<form method="POST" action="order.html">
 	    <table>
 	      <tr>
 	      <td>Förnamn</td><td ><input type="text" name="fname" pattern="[A-ZÅÄÖ][a-zåäö]+" minlength="3" placeholder="Ditt namn .." title="Förnamn, börja med stor bokstav. Endast bokstäver tillåtna" required></td>
@@ -94,7 +93,7 @@
 	        <td colspan="2"><input type="radio" name="shipping">DHL SlowPackage - 100kr</td>
 	      </tr>
 	      <tr>
-	        <td colspan="2"><input class="button" type="submit" value="Acceptera" formtarget="order.html"></td>
+	        <td colspan="2"><input class="button" type="submit" value="Acceptera"></td>
 	      </tr>
 	    </table>
 	  </form>

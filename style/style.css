@@ -1,9 +1,9 @@
 /* GLOBAL */
 body {
-    font-family: gruppo;
-    background-color: #e0e0e0;
-    margin: 8px;
-    color:white;
+  font-family: gruppo;
+  background-color: #e0e0e0;
+  margin: 8px;
+  color:white;
 }
 
 .header a, footer a {
@@ -31,6 +31,20 @@ ul{
 .button:hover{
 	background-color: black;
 	cursor:pointer;
+}
+
+.blackText{
+  color:black;
+}
+
+.lonelyText{
+  border-radius: 5%;
+  background-color: grey;
+  text-align: center;
+  font-size:1.3em;
+  width: 20%;
+  margin-top:5%;
+  padding: 10%;
 }
 
 /* HEADER */
@@ -91,7 +105,7 @@ ul{
 /* MAIN */
 main {
     width: 80%;
-    height: 1000px;
+    min-height: 600px;
     margin-left: 10%;
     margin-top: 103px;
     background-color: #ffffff;
@@ -103,7 +117,6 @@ footer {
     display: flex;
     justify-content: center;
     background-color: #474747;
-
 }
 
 .footerColumns {
