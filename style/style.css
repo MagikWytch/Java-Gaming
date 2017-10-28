@@ -3,6 +3,7 @@ body {
     font-family: gruppo;
     background-color: #e0e0e0;
     margin: 8px;
+    color:white;
 }
 
 .header a, footer a {
@@ -132,6 +133,7 @@ footer section:last-of-type ul li{
 #product-content {
     display: flex;
     justify-content: center;
+    color:black;
 }
 
 #product-content .product-description {
