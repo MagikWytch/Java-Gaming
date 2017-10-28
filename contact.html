@@ -3,6 +3,7 @@
 <head>
 
 	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/styleforms.css">
 	<link href='https://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet'>
 
 </head>
@@ -16,7 +17,7 @@
 
 	<section class="headerLogo">
 
-		<a href="index.html"> <img src="images/headerlogo.jpg"> </a>
+		<a href="index.html"> <img src="images/logo.png"> </a>
 
 	</section>
 
@@ -50,7 +51,28 @@
 
 <main>
 
-	<section  id="contentBackground">
+	<section id="formMain">
+
+		<form>
+		      <table>
+		        <tr>
+		          <td>Förnamn</td><td ><input type="text" name="fname" pattern="[A-ZÅÄÖ][a-zåäö]+" minlength="3" placeholder="Ditt namn .." title="Förnamn, börja med stor bokstav. Endast bokstäver tillåtna" required></td>
+		        </tr>
+		        <tr>
+		          <td>Efternamn</td><td ><input type="text" name="lname" pattern="[A-ZÅÄÖ][a-zåäö]+" minlength="2" placeholder="Ditt efternamn .." title="Efternamn, börja med stor bokstav. Endast bokstäver tillåtna" required></td>
+		        </tr>
+		        <tr>
+		          <td>E-Mail</td><td><input type="email" name="email" placeholder="E-mail .." title="Email" required></td>
+		        </tr>
+		        <tr>
+		          <td colspan="2"><textarea name="commentfield" rows="7" cols="50" minlength="10" maxlength="255" placeholder="Skriv ditt meddelande här .." required></textarea></td>
+		        </tr>
+		      <tr>
+		        <td colspan="2"><input type="submit" value="Skicka"></td>
+		      </tr>
+		    </table>
+		  </form>
+
 
 	</section>
 
@@ -104,7 +126,7 @@
 
 <section class="footerColumns">
 
-	<header><h4>Följ oss på:</h4></header>
+	<header><h4>Följ oss</h4></header>
 	<nav>
 
 		<ul>
