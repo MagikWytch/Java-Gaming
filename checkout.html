@@ -20,8 +20,11 @@
 
 	<section class="headerLogo">
 
-		<a href="index.html"> <img src="images/logo.png"> </a>
-
+		<a href="index.html"> <img id="logo" src="images/logo.png"> </a>
+		<section id="searchContainer">
+			<input id="searchBar" type="text" placeholder="Sök ..">
+			<img id="searchImg" class="button" src="images/search.png">
+		</section>
 	</section>
 
 
@@ -54,7 +57,7 @@
 
 <main>
 
-	<section  id="contentBackground">
+	<section  id="contentContainer">
 		<form class="lonelyText" method="POST" action="order.html">
 	    <table>
 				<h2>Skriv in dina kontakt och fakturerings uppgifter, Tack!</h2>
@@ -116,10 +119,10 @@
 
 		<ul>
 
-			<a href="index.html"> <li>Hem</li> </a>
-			<a href="products.html"> <li>Produkter</li> </a>
-			<a href="contact.html"> <li>Kontakta oss</li> </a>
-			<a href="blog.html"> <li>Blogg</li> </a>
+			<li><a href="index.html">Hem</a></li>
+			<li><a href="products.html">Produkter</a></li>
+			<li><a href="contact.html">Kontakta oss</a></li>
+			<li><a href="blog.html">Blogg</a></li>
 		</ul>
 
 	</nav>
@@ -134,10 +137,10 @@
 
 		<ul>
 
-			<a href=""> <li>Om oss</li> </a>
-			<a href=""> <li>Köpvilkor</li> </a>
-			<a href=""> <li>Hitta Varuhus</li> </a>
-			<a href=""> <li>Leverans</li> </a>
+			<li><a href="">Om oss </a></li>
+			<li><a href="">Köpvilkor</a></li>
+			<li><a href="">Hitta Varuhus</a></li>
+			<li><a href="">Leverans</a></li>
 
 
 		</ul>
@@ -155,14 +158,13 @@
 
 		<ul>
 
-			<a href=""> <li><img src="images/face.jpg" alt="Facebook"></li> </a>
-			<a href=""> <li><img src="images/twitter.jpg" alt="Twitter"></li> </a>
-			<a href=""> <li><img src="images/youtube.jpg" alt="Youtube"></li> </a>
+			<li><a href=""><img src="images/face.jpg" alt="Facebook"></a></li>
+			<li><a href=""><img src="images/twitter.jpg" alt="Twitter"></a></li>
+			<li><a href=""><img src="images/youtube.jpg" alt="Youtube"></a></li>
 
 		</ul>
 
 	</nav>
-
 
 </section>
 
