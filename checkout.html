@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+	<meta charset="UTF-8">
+	<meta name="description" content="Vi specialiserar oss på att sälja spel skrivna i Java! Kom hit och fynda! Alltid kampanjer igång!">
+	<meta name="keywords" content="games,java,gamers,blog,blogg,spel">
+	<meta name="author" content="SuperMarkUpGroup SMUG">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<link rel="stylesheet" type="text/css" href="style/styleforms.css">
 	<link href='https://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet'>
-
+	<title>Uppgifter</title>
 </head>
 
 <body>
@@ -16,7 +20,7 @@
 
 	<section class="headerLogo">
 
-		<a href="index.html"> <img src="images/headerlogo.jpg"> </a>
+		<a href="index.html"> <img src="images/logo.png"> </a>
 
 	</section>
 
@@ -28,8 +32,8 @@
 
 			<ul>
 
-  				<a href="products.html"><li>Produkter</li> </a>
-  				<a href="contact.html"><li>Kontakt</li> </a>
+  				<a href="products.html"><li class="button">Produkter</li> </a>
+  				<a href="contact.html"><li class="button">Kontakt</li> </a>
 
 			</ul>
 
@@ -51,7 +55,49 @@
 <main>
 
 	<section  id="contentBackground">
-
+		<form class="lonelyText" method="POST" action="order.html">
+	    <table>
+				<h2>Skriv in dina kontakt och fakturerings uppgifter, Tack!</h2>
+	      <tr>
+	      <td>Förnamn</td><td ><input type="text" name="fname" pattern="[A-ZÅÄÖ][a-zåäö]+" minlength="3" placeholder="Ditt namn .." title="Förnamn, börja med stor bokstav. Endast bokstäver tillåtna" required></td>
+	      </tr>
+	      <tr>
+	          <td>Efternamn</td><td ><input type="text" name="lname" pattern="[A-ZÅÄÖ][a-zåäö]+" minlength="2" placeholder="Ditt efternamn .." title="Efternamn, börja med stor bokstav. Endast bokstäver tillåtna" required></td>
+	      </tr>
+	      <tr>
+	        <td>Adress</td>
+	        <td><input type="text" name="adress" minlength="5" placeholder="Din adress .." title="Adress, minst 5 tecken" required></td>
+	      </tr>
+	      <tr>
+	        <td>Stad</td>
+	        <td><input type="text" name="city" pattern="[A-ZÅÄÖ][a-zåäö]+" minlength="2" placeholder="Din stad .." title="Stad, börja med stor bokstav. Endast bokstäver tillåtna" required></td>
+	      </tr>
+	      <tr>
+	        <td>Postnummer</td>
+	        <td><input type="text" name="zipcode" pattern="[0-9]{5}" placeholder="Ditt postnr .." title="Postnr, 5 siffror utan mellanrum" required></td>
+	      </tr>
+	      <tr>
+	        <td>Land</td>
+	        <td><input type="text" name="country" pattern="[A-ZÅÄÖ][a-zåäö]+" minlength="2" placeholder="Ditt land .." title="Land, börja med stor bokstav. Endast bokstäver tillåtna" required></td>
+	      </tr>
+	      <tr>
+	          <td>E-Mail</td><td><input type="email" name="email" placeholder="Din E-mail .." title="Email" required></td>
+	      </tr>
+	      <tr><td colspan="2"><hr><h2>Frakt</h2></td></tr>
+	      <tr>
+	        <td colspan="2"><input type="radio" name="shipping" checked>Posten - Fraktfritt</td>
+	      </tr>
+	      <tr>
+	        <td colspan="2"><input type="radio" name="shipping">Schenker Express - 50kr</td>
+	      </tr>
+	      <tr>
+	        <td colspan="2"><input type="radio" name="shipping">DHL SlowPackage - 100kr</td>
+	      </tr>
+	      <tr>
+	        <td colspan="2"><input class="button" type="submit" value="Acceptera"></td>
+	      </tr>
+	    </table>
+	  </form>
 	</section>
 
 
@@ -104,7 +150,7 @@
 
 <section class="footerColumns">
 
-	<header><h4>Följ oss på:</h4></header>
+	<header><h4>Följ oss</h4></header>
 	<nav>
 
 		<ul>
