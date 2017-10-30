@@ -327,14 +327,12 @@ input[type=submit]{
 #posts>h2{
 	min-width: 100%;
 	padding: 10px;
-	color: #1697C9;
+	color: grey;
 	height: 50px;
 	line-height: 50px;
 	font-family: arial;
 	}
-#posts *{
 
-}
 .post{
 	min-width: 60%;
 	max-width: 80%;
@@ -345,7 +343,7 @@ input[type=submit]{
 	margin: 0 auto;
   width: 50%;
   text-align: left;
-  background-color: #abb8ce;
+  background-color: grey;
 	height: auto;
 }
 #sidebar li{
@@ -355,7 +353,7 @@ input[type=submit]{
 	text-decoration: none;
 	font-family:arial;
 	line-height: 1.5em;
-
+  color:white;
 }
 
 #sidebar h3{
