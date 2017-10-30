@@ -4,6 +4,9 @@
   html{
     font-size:50%;
   }
+  #searchBar{
+    min-width: 1px;
+  }
 }
 
 body {
@@ -105,7 +108,7 @@ figcaption {
 #searchBar{
   flex:3;
   height:auto;
-  min-width: 150px;
+  min-width: 80px;
   max-width: 250px;
   padding-right:0;
   margin-right:0;
