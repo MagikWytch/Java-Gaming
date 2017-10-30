@@ -271,23 +271,23 @@ input[type=submit]{
 
 }
 
-/*Product page specific CSS*/
+/*Product page specific CSS - MEDUSA*/
 
 #product-content {
+    width: 100%;
     display: flex;
     justify-content: center;
-    color:black;
 }
 
-#product-content .product-description {
+.product-description {
     display: flex;
     align-items: center;
-    width: 700px;
-    height: 110px;
 }
 
 #product-content ul {
+    width: 60%;
     display: block;
+    list-style: none;
     padding: 0;
     margin: 0;
     overflow: hidden;
@@ -295,12 +295,10 @@ input[type=submit]{
 
 #product-content ul li {
     border-bottom: 1px solid #474747;
-    border-left: 1px solid #474747;
-    border-right: 1px solid #474747;
 }
 
-#product-content ul li:first-child {
-    border-top: 1px solid #474747;
+#product-content ul li:last-child {
+    border-bottom: none;
 }
 
 .product-image {
@@ -311,10 +309,11 @@ input[type=submit]{
     width: 100px;
 }
 
-#product-content .product-image img {
+.product-image img {
     height: 100px;
     width: 75px;
 }
+
 
 
 /* mohammed 'style'*/
