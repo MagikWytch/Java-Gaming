@@ -108,7 +108,7 @@ figcaption {
 #searchBar{
   flex:3;
   height:auto;
-  min-width: 80px;
+  min-width: 50px;
   max-width: 250px;
   padding-right:0;
   margin-right:0;
@@ -137,7 +137,7 @@ figcaption {
     display: flex;
     justify-content: center;
     justify-content: space-around;
-    margin-right: 33px;
+    margin-right: 10%;
 }
 
 .headerButtons li {
@@ -419,4 +419,14 @@ text-align: center;
 	}
 #posts{
   color: black;
+}
+@media (max-width:768px) {
+  html{
+    font-size:50%;
+  }
+  #searchImg{
+    height:0;
+    width:0;
+    border:none;
+  }
 }
