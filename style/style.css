@@ -1,14 +1,21 @@
 
 /* GLOBAL */
+@media (max-width:768px) {
+  html{
+    font-size:50%;
+  }
+}
+
 body {
   font-family: gruppo;
   background-color: #e0e0e0;
   margin: 8px;
   color:white;
 }
-
+a{
+  text-decoration: none;
+}
 .header a, footer a {
-	text-decoration: none;
 	color:white;
 }
 
@@ -32,6 +39,10 @@ ul{
 .button:hover{
 	background-color: black;
 	cursor:pointer;
+}
+.button a{
+  line-height: 40px;
+  color:white;
 }
 
 .blackText{
@@ -78,7 +89,7 @@ figcaption {
     height: 60px;
     margin-top:5px;
     width:100%;
-    min-width: 150px;
+    min-width: 100px;
     max-width: 350px;
 }
 #searchContainer{
