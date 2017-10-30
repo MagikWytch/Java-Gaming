@@ -300,3 +300,97 @@ input[type=submit]{
     height: 100px;
     width: 75px;
 }
+
+
+/* mohammed 'style'*/
+#posts>{
+	 display: flex;
+		font-family: sans-serif;
+		flex-flow: wrap row;
+		height: 800px;
+}
+#posts>h2{
+	min-width: 100%;
+	padding: 10px;
+	color: #1697C9;
+	height: 50px;
+	line-height: 50px;
+	font-family: arial;
+	}
+#posts *{
+
+}
+.post{
+	min-width: 60%;
+	max-width: 80%;
+	padding-left:5px;
+	font-family: serif,sans-serif,arial;
+}
+#sidebar{
+	margin: 0 auto;
+  width: 200px;
+  background-color: #abb8ce;
+	height: 400px;
+}
+#sidebar li{
+	list-style-type: none;
+}
+#sidebar a{
+	text-decoration: none;
+	font-family:arial;
+	line-height: 1.5em;
+
+}
+#sidebar ul nav {
+
+	margin-left: auto;
+	margin-right: auto;
+	color: #822D0C;
+	width: 100%;
+}
+#sidebar h3{
+margin-left: 45px;
+}
+.posts form{
+
+text-align: center;
+}
+#address{
+	width: 100%;
+	padding: 15px 20px;
+	color: #3a4559;
+	font-family: sans-serif;
+}
+#items{
+	background-color:grey;
+	width: 70%;
+	height: 35%;
+  margin: 0 auto;
+	display: flex;
+	font-family: "Times New Roman", Georgia;
+  border-radius: 5px;
+	}
+  #items li{
+		list-style-type: none;
+	}
+
+	#buy{
+    text-align: center;
+    margin: 5px auto;
+
+  }
+	#contentThanks{
+
+	 padding: 15px 20px;
+	 text-align: center;
+	}
+	#contentThanks div{
+  background-color: grey;
+   width: 70%;
+   height: 70%;
+   margin: 200px auto;
+
+	}
+#posts{
+  color: black;
+}
