@@ -315,6 +315,11 @@ input[type=submit]{
 
 
 /* mohammed 'style'*/
+
+.comment-label{
+  font-size: 20px;
+  font-weight: bold;
+}
 #blogContainer{
   display:flex;
 }
