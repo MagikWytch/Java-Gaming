@@ -52,11 +52,14 @@ ul{
 .lonelyText{
   border-radius: 10px;
   background-color: grey;
-  text-align: center;
   font-size:20px;
   width: 60%;
   padding: 5%;
   border: 1px solid #474747;
+}
+.lonelyText h1, .lonelyText h2, .lonelyText h3 {
+  text-align: center;
+
 }
 
 figcaption {
