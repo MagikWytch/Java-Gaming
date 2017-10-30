@@ -104,7 +104,6 @@ figcaption {
     min-width: 100px;
     max-width: 350px;
 }
-<<<<<<< HEAD
 
 #searchContainer {
     flex: 2;
@@ -136,36 +135,38 @@ figcaption {
     border: 1px solid white;
     border-left: none;
     border-radius: 0 5px 5px 0;
-=======
-#searchContainer{
-  flex:2;
-  display:flex;
-  height:27px;
-  margin-top:20px;
-  margin-bottom: 5px;
 }
-#searchBar{
-  flex:3;
-  height:auto;
-  min-width: 50px;
-  max-width: 250px;
-  padding-right:0;
-  margin-right:0;
-  border: 1px solid white;
-  border-right:none;
-  border-radius:5px 0 0 5px;
+
+#searchContainer {
+    flex: 2;
+    display: flex;
+    height: 27px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#searchBar {
+    flex: 3;
+    height: auto;
+    min-width: 50px;
+    max-width: 250px;
+    padding-right: 0;
+    margin-right: 0;
+    border: 1px solid white;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
 
 }
-#searchImg{
-  flex:1;
-  height:25px;
-  padding:0;
-  margin-left:0;
-  max-width:35px;
-  border: 1px solid white;
-  border-left:none;
-  border-radius:0 5px 5px 0;
->>>>>>> 67361eac8300b630aeb3e060d5d05c6022ff07d7
+
+#searchImg {
+    flex: 1;
+    height: 25px;
+    padding: 0;
+    margin-left: 0;
+    max-width: 35px;
+    border: 1px solid white;
+    border-left: none;
+    border-radius: 0 5px 5px 0;
 }
 
 .headerButtons {
@@ -479,13 +480,15 @@ input[type=submit] {
 #posts {
     color: black;
 }
-@media (max-width:768px) {
-  html{
-    font-size:50%;
-  }
-  #searchImg{
-    height:0;
-    width:0;
-    border:none;
-  }
+
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+
+    #searchImg {
+        height: 0;
+        width: 0;
+        border: none;
+    }
 }
