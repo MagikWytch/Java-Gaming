@@ -314,6 +314,9 @@ input[type=submit]{
 
 
 /* mohammed 'style'*/
+#blogContainer{
+  display:flex;
+}
 #posts>{
 	 display: flex;
 		font-family: sans-serif;
@@ -339,9 +342,10 @@ input[type=submit]{
 }
 #sidebar{
 	margin: 0 auto;
-  width: 200px;
+  width: 50%;
+  text-align: left;
   background-color: #abb8ce;
-	height: 400px;
+	height: auto;
 }
 #sidebar li{
 	list-style-type: none;
@@ -352,13 +356,7 @@ input[type=submit]{
 	line-height: 1.5em;
 
 }
-#sidebar ul nav {
 
-	margin-left: auto;
-	margin-right: auto;
-	color: #822D0C;
-	width: 100%;
-}
 #sidebar h3{
 margin-left: 45px;
 }
