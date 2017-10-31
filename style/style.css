@@ -348,10 +348,6 @@ input[type=submit] {
     color: #000000;
 }
 
-.description-box a:hover {
-    color: #474747;
-}
-
 .description-box p {
     color: #000000;
 
@@ -372,12 +368,14 @@ input[type=submit] {
     width: 70px;
 }
 
+/* Header and text box */
 .info-box {
     flex: 3;
     height: 110px;
     justify-content: flex-start;
 }
 
+/*Price and put in cart box */
 .price-and-add-box {
     flex: 1;
     display: flex;
@@ -386,12 +384,24 @@ input[type=submit] {
     height: 110px;
 }
 
-.price-and-add-box button {
+.price-and-add-box p {
+    margin: 10px;
+}
+
+/* Add to cart button specifics */
+.price-and-add-box .button.add-button {
     margin-bottom: 10px;
 }
 
-.price-and-add-box p {
-    margin: 10px;
+.add-button {
+    width: 45px;
+    height: 30px;
+    font-size: 50px;
+}
+
+.add-button a {
+    line-height: 25px;
+    color: #ffffff;
 }
 
 /***************************************************/
