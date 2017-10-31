@@ -1,13 +1,4 @@
 /* GLOBAL */
-@media (max-width: 768px) {
-    html {
-        font-size: 50%;
-    }
-
-    #searchBar {
-        min-width: 1px;
-    }
-}
 
 body {
     font-family: gruppo;
