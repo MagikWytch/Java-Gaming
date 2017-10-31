@@ -39,7 +39,7 @@ ul {
     font-family: gruppo;
     font-size: 20px;
     text-align: center;
-    display:flex;
+    display: flex;
     justify-content: space-around;
 }
 
@@ -359,6 +359,11 @@ input[type=submit] {
 
 .description-box a:hover {
     color: #474747;
+}
+
+.description-box p {
+    color: #000000;
+
 }
 
 /* Image box */
