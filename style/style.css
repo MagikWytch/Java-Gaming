@@ -40,6 +40,8 @@ ul {
     font-family: gruppo;
     font-size: 20px;
     text-align: center;
+    display:flex;
+    justify-content: space-around;
 }
 
 .button:hover {
@@ -316,20 +318,25 @@ input[type=submit] {
 
 }
 
-/*Product page specific CSS - MEDUSA*/
+/***************************************************/
+/*          Products CSS - Made by Medusa          */
+/***************************************************/
 
-#product-content {
+/* Main window box */
+#main-content-box {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.product-description {
+/* Description box */
+.description-box {
     display: flex;
     align-items: center;
 }
 
-#product-content ul {
+/* Unordered list and list specific code */
+#main-content-box ul {
     width: 60%;
     display: block;
     list-style: none;
@@ -338,33 +345,63 @@ input[type=submit] {
     overflow: hidden;
 }
 
-#product-content ul li {
+#main-content-box ul li {
     border-bottom: 1px solid #474747;
 }
 
-#product-content ul li:last-child {
+#main-content-box ul li:last-child {
     border-bottom: none;
 }
 
-.product-image {
+/* Description-box links <a> specific code */
+.description-box a {
+    color: #000000;
+}
+
+.description-box a:hover {
+    color: #474747;
+}
+
+/* Image box */
+.image-box {
+    flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 110px;
-    width: 100px;
 }
 
-.product-image img {
-    height: 100px;
-    width: 75px;
+/* Product image */
+.image-box img {
+    height: 95px;
+    width: 70px;
 }
 
-.add-button {
-    width: 50px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 25px;
+.info-box {
+    flex: 3;
+    height: 110px;
+    justify-content: flex-start;
 }
+
+.price-and-add-box {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 110px;
+}
+
+.price-and-add-box button {
+    margin-bottom: 10px;
+}
+
+.price-and-add-box p {
+    margin: 10px;
+}
+
+/***************************************************/
+/*             // END Products CSS                 */
+/***************************************************/
 
 /* mohammed 'style'*/
 
@@ -461,11 +498,9 @@ input[type=submit] {
 #buy {
     text-align: center;
     margin: 5px auto;
-
 }
 
 #contentThanks {
-
     padding: 15px 20px;
     text-align: center;
 }
@@ -475,7 +510,6 @@ input[type=submit] {
     width: 70%;
     height: 70%;
     margin: 200px auto;
-
 }
 
 #posts {
