@@ -373,13 +373,13 @@ input[type=submit] {
     flex: 3;
     height: 110px;
     justify-content: flex-start;
-   }
+}
 
 /*Price and put in cart box */
 .price-and-add-box {
     flex: 1;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-end;
     height: 110px;
 }
@@ -521,7 +521,7 @@ input[type=submit] {
     color: black;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
     html {
         font-size: 100%;
     }
@@ -543,11 +543,34 @@ input[type=submit] {
 
     .info-box {
         margin-left: 5px
-
     }
 
     .info-box h4 {
         font-size: 80%;
+    }
+
+    .price-and-add-box p {
+        font-size: 80%;
+    }
+
+    .price-and-add-box a {
+        width: 80%;
+        height: 80%;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    #main-content-box ul {
+        width: 80%;
+    }
+}
+
+@media (max-width: 350px) {
+
+    #main-content-box ul {
+        width: 100%;
     }
 }
 
