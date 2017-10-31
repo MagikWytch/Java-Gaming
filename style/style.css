@@ -1,13 +1,4 @@
 /* GLOBAL */
-@media (max-width: 768px) {
-    html {
-        font-size: 50%;
-    }
-
-    #searchBar {
-        min-width: 1px;
-    }
-}
 
 body {
     font-family: gruppo;
@@ -520,9 +511,13 @@ input[type=submit] {
     color: black;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     html {
-        font-size: 50%;
+        font-size: 100%;
+    }
+
+    #searchBar {
+        min-width: 1px;
     }
 
     #searchImg {
@@ -530,4 +525,21 @@ input[type=submit] {
         width: 0;
         border: none;
     }
+
+    .image-box img {
+        width: 45px;
+        height: 60px;
+    }
+
+    .info-box {
+        margin-left: 5px
+
+    }
+
+    .info-box h4 {
+        font-size: 80%;
+    }
+
 }
+
+
