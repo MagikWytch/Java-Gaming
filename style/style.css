@@ -373,7 +373,7 @@ input[type=submit] {
     flex: 3;
     height: 110px;
     justify-content: flex-start;
-}
+   }
 
 /*Price and put in cart box */
 .price-and-add-box {
