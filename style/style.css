@@ -39,6 +39,8 @@ ul {
     font-family: gruppo;
     font-size: 20px;
     text-align: center;
+    display:flex;
+    justify-content: space-around;
 }
 
 .button:hover {
@@ -495,11 +497,9 @@ input[type=submit] {
 #buy {
     text-align: center;
     margin: 5px auto;
-
 }
 
 #contentThanks {
-
     padding: 15px 20px;
     text-align: center;
 }
@@ -509,7 +509,6 @@ input[type=submit] {
     width: 70%;
     height: 70%;
     margin: 200px auto;
-
 }
 
 #posts {
