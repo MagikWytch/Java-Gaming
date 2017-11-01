@@ -269,7 +269,6 @@ input[type=submit] {
 /*index CSS below*/
 #topRow {
 
-
     display: flex;
     justify-content: center;
 
@@ -282,7 +281,6 @@ input[type=submit] {
 #middleRow {
 
     display: flex;
-    
 
 }
 
@@ -411,6 +409,26 @@ input[type=submit] {
 
 /***************************************************/
 /*             // END Products CSS                 */
+/***************************************************/
+
+/***************************************************/
+/*       Shopping Cart CSS - Made by Medusa        */
+/***************************************************/
+.shopping-cart {
+    width: 60%
+}
+
+.main-table-body {
+    width: 100%;
+}
+
+.table-body img {
+    width: 45px;
+    height: 70px;
+}
+
+/***************************************************/
+/*          // END Shopping Cart CSS               */
 /***************************************************/
 
 /* mohammed 'style'*/
@@ -630,26 +648,23 @@ input[type=submit] {
     }
 }
 
-@media (max-width: 1200px){
-#destiny2add img, #wolfensteinAdd img{
+@media (max-width: 1200px) {
+    #destiny2add img, #wolfensteinAdd img {
 
-    width: 100%;
-    
-}
+        width: 100%;
 
-#indexContent figcaption {
+    }
 
-    font-size: 100%;
-}
+    #indexContent figcaption {
 
-#middleRow{
+        font-size: 100%;
+    }
 
-      
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
+    #middleRow {
 
-
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 
 }
