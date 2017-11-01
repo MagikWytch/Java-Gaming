@@ -269,15 +269,20 @@ input[type=submit] {
 /*index CSS below*/
 #topRow {
 
+
     display: flex;
     justify-content: center;
 
 }
 
+#topRow img {
+    width: 100%
+}
+
 #middleRow {
 
     display: flex;
-    margin-left: 5%;
+    
 
 }
 
@@ -613,4 +618,28 @@ input[type=submit] {
     #main-content-box ul {
         width: 100%;
     }
+}
+
+@media (max-width: 1200px){
+#destiny2add img, #wolfensteinAdd img{
+
+    width: 100%;
+    
+}
+
+#indexContent figcaption {
+
+    font-size: 100%;
+}
+
+#middleRow{
+
+      
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
 }
