@@ -1,5 +1,5 @@
 /* GLOBAL */
-<<<<<<< HEAD
+
 @media (max-width: 600px)
  {
    html section{
@@ -10,8 +10,8 @@
         min-width: 1px;
     }
 }
-=======
->>>>>>> 537ad2bd92d7157720be970df97ccd19147ae864
+
+
 
 body {
     font-family: gruppo;
@@ -566,9 +566,6 @@ input[type=submit] {
     color: black;
 }
 
-<<<<<<< HEAD
-
-=======
 @media (max-width: 650px) {
     /* GLOBAL */
     main {
@@ -677,7 +674,6 @@ input[type=submit] {
     #destiny2add img, #wolfensteinAdd img {
 
         width: 100%;
->>>>>>> 537ad2bd92d7157720be970df97ccd19147ae864
 
     }
 
