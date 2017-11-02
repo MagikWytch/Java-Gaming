@@ -1,4 +1,5 @@
 /* GLOBAL */
+<<<<<<< HEAD
 @media (max-width: 600px)
  {
    html section{
@@ -9,6 +10,8 @@
         min-width: 1px;
     }
 }
+=======
+>>>>>>> 537ad2bd92d7157720be970df97ccd19147ae864
 
 body {
     font-family: gruppo;
@@ -40,7 +43,7 @@ ul {
     font-family: gruppo;
     font-size: 20px;
     text-align: center;
-    display:flex;
+    display: flex;
     justify-content: space-around;
 }
 
@@ -284,10 +287,13 @@ input[type=submit] {
 
 }
 
+#topRow img {
+    width: 100%
+}
+
 #middleRow {
 
     display: flex;
-    margin-left: 5%;
 
 }
 
@@ -358,8 +364,9 @@ input[type=submit] {
     color: #000000;
 }
 
-.description-box a:hover {
-    color: #474747;
+.description-box p {
+    color: #000000;
+
 }
 
 /* Image box */
@@ -377,30 +384,73 @@ input[type=submit] {
     width: 70px;
 }
 
+/* Header and text box */
 .info-box {
     flex: 3;
     height: 110px;
     justify-content: flex-start;
 }
 
+/*Price and put in cart box */
 .price-and-add-box {
     flex: 1;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-end;
     height: 110px;
-}
-
-.price-and-add-box button {
-    margin-bottom: 10px;
 }
 
 .price-and-add-box p {
     margin: 10px;
 }
 
+/* Add to cart button specifics */
+.price-and-add-box .button.add-button {
+    margin-bottom: 10px;
+}
+
+.add-button {
+    width: 45px;
+    height: 30px;
+    font-size: 50px;
+}
+
+.add-button a {
+    line-height: 25px;
+    color: #ffffff;
+}
+
 /***************************************************/
 /*             // END Products CSS                 */
+/***************************************************/
+
+/***************************************************/
+/*       Shopping Cart CSS - Made by Medusa        */
+/***************************************************/
+.shopping-cart {
+    width: 60%
+}
+
+.table-body {
+    width: 100%;
+}
+
+.shopping-cart h1 {
+    width: 100%;
+    background-color: #474747;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.table-body img {
+    width: 45px;
+    height: 70px;
+}
+
+/***************************************************/
+/*          // END Shopping Cart CSS               */
 /***************************************************/
 
 /* mohammed 'style'*/
@@ -516,11 +566,131 @@ input[type=submit] {
     color: black;
 }
 
+<<<<<<< HEAD
 
-
-    #searchImg {
-        height: 0;
-        width: 0;
-        border: none;
+=======
+@media (max-width: 650px) {
+    /* GLOBAL */
+    main {
+        width: 100%;
+        margin-left: 0;
     }
+
+    .header .button {
+        width: 40px;
+        height: 20px;
+        font-size: 14px;
+    }
+
+    .headerButtons ul {
+        margin-right: 0;
+        padding: 0;
+    }
+
+    #logo {
+        height: 50%;
+        margin-top: 15px;
+    }
+
+    #cartLogo {
+        height: 30px;
+        padding: 20px 0;
+    }
+
+    #searchContainer {
+        position: fixed;
+        top: 53px;
+        left: 50px;
+    }
+
+    #searchBar, #searchImg {
+        border-color: grey;
+    }
+
+    /* Product specific */
+    /* FORMS */
+    .lonelyText {
+        font-size: 12px;
+        width: 80%;
+    }
+
+    /* Product specific */
+    .image-box img {
+        width: 45px;
+        height: 60px;
+    }
+
+    .info-box {
+        margin-left: 5px
+    }
+
+    .info-box h4 {
+        font-size: 80%;
+    }
+
+    .price-and-add-box p {
+        font-size: 80%;
+    }
+
+    .price-and-add-box a {
+        width: 80%;
+        height: 80%;
+    }
+
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 70%;
+    }
+
+    .footerColumns img {
+        width: 15px;
+        height: auto;
+    }
+
+    #main-content-box ul {
+        width: 80%;
+    }
+}
+
+@media (max-width: 350px) {
+    main {
+        padding: 0 5px;
+    }
+
+    .header .button {
+        font-size: 100%;
+    }
+
+    #cartLogo {
+        height: 25px;
+        padding: 20px 0;
+    }
+
+    #main-content-box ul {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    #destiny2add img, #wolfensteinAdd img {
+
+        width: 100%;
+>>>>>>> 537ad2bd92d7157720be970df97ccd19147ae864
+
+    }
+
+    #indexContent figcaption {
+
+        font-size: 100%;
+    }
+
+    #middleRow {
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
 }
