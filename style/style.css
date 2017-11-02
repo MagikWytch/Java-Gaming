@@ -1,18 +1,5 @@
 /* GLOBAL */
 
-@media (max-width: 600px)
- {
-   html section{
-     color: red;
-   }
-
-    #searchBar {
-        min-width: 1px;
-    }
-}
-
-
-
 body {
     font-family: gruppo;
     background-color: #e0e0e0;
@@ -604,7 +591,6 @@ input[type=submit] {
         border-color: grey;
     }
 
-    /* Product specific */
     /* FORMS */
     .lonelyText {
         font-size: 12px;
@@ -690,3 +676,4 @@ input[type=submit] {
     }
 
 }
+
