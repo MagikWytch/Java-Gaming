@@ -1,5 +1,5 @@
 /* GLOBAL */
-@media only screen and (max-width: 500px)
+@media (max-width: 600px)
  {
    html section{
      color: red;
@@ -516,10 +516,7 @@ input[type=submit] {
     color: black;
 }
 
-@media (max-width: 768px) {
-    html {
-        font-size: 50%;
-    }
+
 
     #searchImg {
         height: 0;
