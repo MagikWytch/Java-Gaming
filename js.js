@@ -72,6 +72,7 @@ function loadCart() {
        $("#photo").after("<img class='itemphoto' src=cart[i].source><br/>") ;
    }
 
+$('#cartLogo').on('click', loadCart());
 
 
  // $(".itemphoto").css("src","images/products-img/products-Call-Of-Duty-WWII.png");
