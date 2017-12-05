@@ -131,7 +131,7 @@ $(function () {
         removeItemAllCounts($(this).closest('.listItem').find('.title').text());
         $('#total').text(costOfCart());
     });
-    
+
 
     $('#clearItems').on('click', function (event) {
         event.preventDefault();
