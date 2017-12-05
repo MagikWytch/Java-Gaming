@@ -7,10 +7,15 @@ function Item(name,source,price,count){
     this.count=count;
     this.source=source;
 }
+
+
 function  addCartItem(nameI,source,priceI,countI) {
     cart = cart || [];
     for (var item in cart){
         if (cart[item].name===nameI){
+            if(countI==null){
+                countI=1;
+            }
             cart[item].count+=countI;
             saveCart();
             return ;
@@ -21,6 +26,8 @@ function  addCartItem(nameI,source,priceI,countI) {
     cart.push(newItem);
     saveCart();
 }
+
+
 function removeOneItem(name) {
     for (var i=0;i<cart.length;i++) {
         if (cart[i].name === name ) {
@@ -58,7 +65,7 @@ function numberOfItems() {
 function costOfCart() {
     var cost=0;
     for (var i in cart){
-        cost+=cart[i].price;
+        cost+=cart[i].price*cart[i].count;
     }
     return cost;
 }
@@ -141,16 +148,20 @@ $(function(){
         $('#total').text(costOfCart());
     });
 
-    $('.sub').on('click', function(){
 
+    $('.sub').on('click', function(){
         var x = Number($(this).closest('td').find('.count').text());
         var y = $(this).closest('.listItem').find('.title');
 
-        addCartItem(y.text());
+        if($(this).closest('td').find('.count').text()==="1"){
+            $(this).closest('.listItem').remove();
+        }
+
+        removeOneItem(y.text());
 
         $(this).closest('td').find('.count').text(x-1);
-
         $('#total').text(costOfCart());
+
     });
 });
 
