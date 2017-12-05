@@ -447,9 +447,10 @@ input[type=submit] {
     line-height: 30px;
 }
 
-#next-page-button {
+#next-page-button , #clearItems{
     margin-top: 10px;
-    float: right;
+    display:inline-block;
+
 }
 
 #next-page-button a {
@@ -459,6 +460,16 @@ input[type=submit] {
 .table-body img {
     width: 30px;
     height: 50px;
+}
+
+#totalItems{
+    border-radius: 30px;
+    background-color: orange;
+    color:crimson;
+    font-weight: bold;
+    position:fixed;
+    top:25px;
+    right:20px;
 }
 
 /***************************************************/
