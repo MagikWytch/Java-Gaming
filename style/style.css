@@ -661,8 +661,6 @@ input[type=submit] {
         width: 80%;
     }
 
-
-
     .button.add-button a {
         font-size: 40px;
         line-height: 25px;
@@ -678,43 +676,49 @@ input[type=submit] {
         font-size: 10px;
         line-height: 10px;
     }
+}
 
-    @media (max-width: 350px) {
-        main {
-            padding: 0 5px;
-        }
-
-        .header .button {
-            font-size: 100%;
-        }
-
-        #cartLogo {
-            height: 25px;
-            padding: 20px 0;
-        }
-
-        #main-content-box ul {
-            width: 100%;
-        }
+@media (max-width: 350px) {
+    main {
+        padding: 0 5px;
     }
 
-    @media (max-width: 1200px) {
-        #destiny2add img, #wolfensteinAdd img {
+    .header .button {
+        font-size: 100%;
+    }
 
-            width: 100%;
+    #cartLogo {
+        height: 25px;
+        padding: 20px 0;
+    }
 
-        }
+    #main-content-box ul {
+        width: 100%;
+    }
+}
 
-        #indexContent figcaption {
+@media (max-width: 1200px) {
+    #destiny2add img, #wolfensteinAdd img {
 
-            font-size: 100%;
-        }
-
-        #middleRow {
-
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
+        width: 100%;
 
     }
+
+    #indexContent figcaption {
+
+        font-size: 100%;
+    }
+
+    #middleRow {
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+}
+
+
+.add , .sub{
+    display:flex;
+}

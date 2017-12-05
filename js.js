@@ -1,20 +1,23 @@
+
+
 var cart=[];
-function Item(source,name,price,count){
+function Item(name,source,price,count){
     this.name=name;
     this.price=price;
     this.count=count;
     this.source=source;
 }
-function  addCartItem(source,nameI,priceI,countI) {
+function  addCartItem(nameI,source,priceI,countI) {
+    cart = cart || [];
     for (var item in cart){
         if (cart[item].name===nameI){
             cart[item].count+=countI;
             saveCart();
-            return;
+            return ;
         }
-
     }
-    var newItem=new Item(source,nameI,priceI,countI);
+
+    var newItem=new Item(nameI,source,priceI,countI);
     cart.push(newItem);
     saveCart();
 }
@@ -65,45 +68,92 @@ function saveCart() {
 
 }
 function loadCart() {
-   cart=JSON.parse(localStorage.getItem("shoppingCart"));
-   console.log(cart);
-   for (var i in cart){
+    cart=JSON.parse(localStorage.getItem("shoppingCart"));
+    displayCart();
 
-       $("#photo").after("<img class='itemphoto' src=cart[i].source><br/>") ;
-   }
-
-$('#cartLogo').on('click', loadCart());
-
-
- // $(".itemphoto").css("src","images/products-img/products-Call-Of-Duty-WWII.png");
-
-  //$("#antal").text(copyCart[1].source).css("color","red");
 
 }
 
 
-var addButton=$(".button");
-addButton.click(function(event){
+var addButton=$(".addBtn");
+
+addButton.on('click', function(event){
     event.preventDefault();
     var name=$(this).attr("data-name");
     var price=Number($(this).attr("data-price"));
     var source=$(this).attr("data-target");
-    addCartItem(source,name,price,1);
+    addCartItem(name,source,price,1);
 
 
 });
 
 function displayCart() {
-    var output="";
-    for (var na in cart){
 
-        output+="<li>"+"<h3>"+cart[na].name+"</h3>"+cart[na].price+"amount  "+" count  "+cart[na].count+"</li>";
 
+    for (var el in cart){
+
+
+        var output="<tr class=\"listItem\">\n" +
+            "                    <td><img class=\"prodImg\" src='"+cart[el].source+"'></td>\n" +
+            "                    <td><h4 class=\"title\">"+cart[el].name+"</h4>\n" +
+            "                        <p>(PC)</p></td>\n" +
+            "                    <td><button class='add'>+</button><p class=\"count\">"+cart[el].count+"</p>\n" +
+            "                        <button class='sub'>-</button></td>\n" +
+            "                    <td><p class=\"price\">"+cart[el].price+"</p>\n" +
+            "                        <p>SEK</p></td>\n" +
+            "                    <td>\n" +
+            "                        <section class=\"button add-button remBtn\">\n" +
+            "                            <a href=\"\">X</a>\n" +
+            "                        </section>\n" +
+            "                    </td>\n" +
+            "                </tr>";
+        $('.table-body').append(output);
     }
-
+    $('#total').text(costOfCart());
 
 }
 
-console.log(cart);
+
+$(function(){
+
+    $('.remBtn').on('click',function(){
+        event.preventDefault();
+        $(this).closest('.listItem').remove();
+        removeItemAllCounts($(this).closest('.listItem').find('.title').text());
+        $('#total').text(costOfCart());
+    });
+
+    $('#test').on('click',function(){
+        console.log("asd");
+
+    });
 
 
+    $('.add').on('click', function(){
+
+        var x = Number($(this).closest('td').find('.count').text());
+        var y = $(this).closest('.listItem').find('.title');
+
+        addCartItem(y.text());
+
+        $(this).closest('td').find('.count').text(x+1);
+
+        $('#total').text(costOfCart());
+    });
+
+    $('.sub').on('click', function(){
+
+        var x = Number($(this).closest('td').find('.count').text());
+        var y = $(this).closest('.listItem').find('.title');
+
+        addCartItem(y.text());
+
+        $(this).closest('td').find('.count').text(x-1);
+
+        $('#total').text(costOfCart());
+    });
+});
+
+
+
+loadCart();
