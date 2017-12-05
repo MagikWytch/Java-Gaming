@@ -92,7 +92,6 @@ addButton.on('click', function (event) {
     var source = $(this).attr("data-target");
     addCartItem(name, source, price, 1);
 
-
 });
 
 function displayCart() {
@@ -132,10 +131,7 @@ $(function () {
         removeItemAllCounts($(this).closest('.listItem').find('.title').text());
         $('#total').text(costOfCart());
     });
-
-    $('#test').on('click', function () {
-
-    });
+    
 
     $('#clearItems').on('click', function (event) {
         event.preventDefault();
