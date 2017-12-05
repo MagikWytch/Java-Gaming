@@ -175,7 +175,7 @@ function totalItemBtn() {
     var btn=$('#totalItems');
     if (!(cart.length===0)) {
         if (!(btn.text())) {
-            var totalItems = "<button id='totalItems'></button>";
+            var totalItems = "<button id='totalItems' disabled></button>";
             $('.headerCheckout').append(totalItems);
             btn = $('#totalItems');
         }
