@@ -9,13 +9,13 @@
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link href='https://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet'>
     <title>PC | Handla produkter | Java Gaming</title>
-<<<<<<< HEAD
+
     <script src="jquery-3.2.1.js"></script>
     <script src="js.js"></script>
 </head>
-=======
+
     </head>
->>>>>>> a0d9bbea84f8f66f950c5c0477577632a3f17bad
+
 
 <body>
 
@@ -63,41 +63,41 @@
             <table>
                 <tr>
                     <td>Förnamn</td>
-                    <td><input type="text" name="fname" pattern="[A-ZÅÄÖ][a-zåäö]+" minlength="3"
+                    <td><input id="fieldName" type="text" name="fname" pattern="[A-ZÅÄÖ][a-zåäö]+" minlength="3"
                                placeholder="Ditt namn .."
                                title="Förnamn, börja med stor bokstav. Endast bokstäver tillåtna" required></td>
                 </tr>
                 <tr>
                     <td>Efternamn</td>
-                    <td><input type="text" name="lname" pattern="[A-ZÅÄÖ][a-zåäö]+" minlength="2"
+                    <td><input id="fieldLastName" type="text" name="lname" pattern="[A-ZÅÄÖ][a-zåäö]+" minlength="2"
                                placeholder="Ditt efternamn .."
                                title="Efternamn, börja med stor bokstav. Endast bokstäver tillåtna" required></td>
                 </tr>
                 <tr>
                     <td>Adress</td>
-                    <td><input type="text" name="adress" minlength="5" placeholder="Din adress .."
+                    <td><input id="fieldAdress" type="text" name="adress" minlength="5" placeholder="Din adress .."
                                title="Adress, minst 5 tecken" required></td>
                 </tr>
                 <tr>
                     <td>Stad</td>
-                    <td><input type="text" name="city" pattern="[A-ZÅÄÖ][a-zåäö]+" minlength="2"
+                    <td><input id="fieldCity" type="text" name="city" pattern="[A-ZÅÄÖ][a-zåäö]+" minlength="2"
                                placeholder="Din stad .." title="Stad, börja med stor bokstav. Endast bokstäver tillåtna"
                                required></td>
                 </tr>
                 <tr>
                     <td>Postnummer</td>
-                    <td><input type="text" name="zipcode" pattern="[0-9]{5}" placeholder="Ditt postnr .."
+                    <td><input id="fieldZipCode" type="text" name="zipcode" pattern="[0-9]{5}" placeholder="Ditt postnr .."
                                title="Postnr, 5 siffror utan mellanrum" required></td>
                 </tr>
                 <tr>
                     <td>Land</td>
-                    <td><input type="text" name="country" pattern="[A-ZÅÄÖ][a-zåäö]+" minlength="2"
+                    <td><input id="fieldCountry" type="text" name="country" pattern="[A-ZÅÄÖ][a-zåäö]+" minlength="2"
                                placeholder="Ditt land .."
                                title="Land, börja med stor bokstav. Endast bokstäver tillåtna" required></td>
                 </tr>
                 <tr>
                     <td>E-Mail</td>
-                    <td><input type="email" name="email" placeholder="Din E-mail .." title="Email" required></td>
+                    <td><input id="fieldEmail" type="email" name="email" placeholder="Din E-mail .." title="Email" required></td>
                 </tr>
                 <tr>
                     <td colspan="2">
@@ -105,13 +105,13 @@
                         <h2>Frakt</h2></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="radio" name="shipping" checked>Posten - Fraktfritt</td>
+                    <td colspan="2"><input class="shipping" type="radio" name="shipping" checked>Posten - Fraktfritt</td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="radio" name="shipping">Schenker Express - 50kr</td>
+                    <td colspan="2"><input class="shipping" type="radio" name="shipping">Schenker Express - 50kr</td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="radio" name="shipping">DHL SlowPackage - 100kr</td>
+                    <td colspan="2"><input class="shipping" type="radio" name="shipping">DHL SlowPackage - 100kr</td>
                 </tr>
                 <tr>
                 </tr>

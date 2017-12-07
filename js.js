@@ -186,6 +186,11 @@ function displayComments() {
 
 $(function () {
 
+    $(".shipping").on("click", function () {
+        $(this)
+    });
+
+
     $('#cartLogo').on('click', displayCart());
 
     $('.remBtn').on('click', function (event) {
@@ -232,7 +237,7 @@ $(function () {
 
     });
 
-        $(".modalTrigger").on("click", function (e) {
+    $(".modalTrigger").on("click", function (e) {
             e.preventDefault();
 
             var modularDiv = "<div id=\"myModal\" class=\"modal\">\n" +
@@ -277,7 +282,7 @@ $(function () {
                         price = products[el].price;
                         source = products[el].source;
                         gameInfo = products[el].info;
-                        console.log("priset är:  "+ price + "taget från: "+products[el].price);
+                        console.log("priset är:  " + price + "taget från: " + products[el].price);
                     }
                 }
             }            //Kod för searchbaren slut!
@@ -333,6 +338,15 @@ function totalItemBtn() {
 
 function searchBar() {
 }
+
+// ******************************
+//   Medusas Code for Order
+// ******************************
+
+
+// ******************************
+//   Medusas Code for Checkout
+// ******************************
 
 loadPage();
 
