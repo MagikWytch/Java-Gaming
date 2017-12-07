@@ -237,9 +237,7 @@ $(function () {
 
     $(".shipping").on("click", function () {
         var cost = costOfCart() + $(this).data("price");
-        var message = "Total kostnad: " + cost;
-
-        $("table").append(message);
+        $("#costWithShipping").text("Total kostnad: " + cost);
     });
 
 
