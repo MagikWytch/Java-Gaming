@@ -1,4 +1,51 @@
 var cart = [];
+var comments = [];
+
+var products = [
+    {
+        name: "Assassin's Creed",
+        price: 599,
+        source: "images/products-img/products-Assassins-Creed-Origins.jpg",
+        info: "Assassin's Creed Origins is an action-adventure video game developed by Ubisoft Montreal and published by Ubisoft. It is the tenth major installment in the Assassin's Creed series and the successor to 2015's Assassin's Creed Syndicate. It was released worldwide for Microsoft Windows, PlayStation 4, and Xbox One on October 27, 2017."
+    },
+    {
+        name: "Call Of Duty",
+        price: 599,
+        source: "images/products-img/products-Call-Of-Duty-WWII.png",
+        info: "Call of Duty: WWII is a first-person shooter video game developed by Sledgehammer Games and published by Activision. It is the fourteenth main installment in the Call of Duty series and was released worldwide on November 3, 2017 for Microsoft Windows, PlayStation 4 and Xbox One."
+    },
+    {
+        name: "Destiny 2",
+        price: 499,
+        source: "images/products-img/products-Destiny-2.png",
+        info: "Destiny 2 is an online-only multiplayer first-person shooter video game developed by Bungie and published by Activision. It was released for PlayStation 4 and Xbox One on September 6, 2017, followed by a Microsoft Windows version the following month."
+    },
+    {
+        name: "DOOM 4",
+        price: 195,
+        source: "images/products-img/products-DOOM-4.jpg",
+        info: "Doom is a first-person shooter video game developed by id Software and published by Bethesda Softworks. A reboot of the Doom franchise, it is the fourth title in the main series and the first major installment since Doom 3 in 2004."
+    },
+    {
+        name: "Fallout 4",
+        price: 99,
+        source: "images/products-img/products-Fallout_4.jpg",
+        info: "Fallout 4 is an action role-playing video game developed by Bethesda Game Studios and published by Bethesda Softworks. It is the fifth major installment in the Fallout series, and was released worldwide on November 10, 2015, for Microsoft Windows, PlayStation 4 and Xbox One."
+    },
+    {
+        name: "Grand Theft Auto V",
+        price: 499,
+        source: "images/products-img/products-Grand_Theft_Auto_v.jpg",
+        info: "Grand Theft Auto V is an action-adventure video game developed by Rockstar North and published by Rockstar Games. It was released in September 2013 for PlayStation 3 and Xbox 360, in November 2014 for PlayStation 4 and Xbox One, and in April 2015 for Microsoft Windows."
+    },
+    {
+        name: "Star Wars Battlefront II",
+        price: 499,
+        source: "images/products-img/products-Starwars-Battlefront-II.jpg",
+        info: "Star Wars Battlefront II is an action shooter video game based on the Star Wars film franchise. It is the fourth major installment of the Star Wars: Battlefront series and seventh overall, and a sequel to the 2015 reboot of the series."
+    }
+];
+
 
 function Item(name, source, price, count) {
     this.name = name;
@@ -80,6 +127,7 @@ function saveCart() {
 function loadPage() {
     cart = JSON.parse(localStorage.getItem("shoppingCart"));
     totalItemBtn();
+    searchBar();
 }
 
 
@@ -117,6 +165,21 @@ function displayCart() {
         $('.table-body').append(output);
     }
     $('#total').text(costOfCart());
+
+}
+
+function saveComment() {
+    localStorage.setItem("commentStore", JSON.stringify(comments));
+}
+
+function displayComments() {
+
+    for (var el in comments) {
+
+        var output = "<p>" + comments[el] + "</p><hr>"
+
+        $(".modalTextArea").append(output);
+    }
 
 }
 
@@ -169,22 +232,109 @@ $(function () {
 
     });
 
+        $(".modalTrigger").on("click", function (e) {
+            e.preventDefault();
+
+            var modularDiv = "<div id=\"myModal\" class=\"modal\">\n" +
+                "\n" +
+                "            <!-- Modal content -->\n" +
+                "            <div class=\"modal-content\">\n" +
+                "                <span class=\"close closeModal\">&times;</span>\n" +
+                "                <p class=\"gameTitle\"></p>\n" +
+                "                <p class=\"gamePrice\">Some text in the Modal..</p>\n" +
+                "                <img class=\"gameImg\" src=\"\"> </img>\n" +
+                "                <p class=\"gameInfo\">Some text in the Modal..</p>\n" +
+                "                <div class = \"modalTextArea\">\n" +
+                "                    <textarea id=\"commentArea\" rows=\"4\" cols=\"30\" maxlength=\"255\" placeholder=\"Enter your comment here\"></textarea>\n" +
+                "                    <button  id=\"commentBtn\">Submit Comment</button>\n" +
+                "                    <p><b>Comments:</b></p><hr>\n" +
+                "\n" +
+                "                </div>\n" +
+                "\n" +
+                "            </div>\n" +
+                "\n" +
+                "        </div>";
+
+            $('main').append(modularDiv);
+
+            var finder = $(this).closest("li").find(".modalBox");
+
+            var name = finder.attr("data-name");
+            var price = Number(finder.attr("data-price"));
+            var source = finder.attr("data-target");
+            var gameInfo = finder.attr("data-gameInfo");
+
+            //Lite kod för searchbaren!
+
+            if ($(this).hasClass('button')) {
+                console.log("klickat på search");
+                var searchFor = $('#searchBar').val();
+                for (var el in products) {
+                    console.log("for el in products");
+                    if (products[el].name === searchFor) {
+                        console.log("hittat namnet: " + products[el].name);
+                        name = products[el].name;
+                        price = products[el].price;
+                        source = products[el].source;
+                        gameInfo = products[el].info;
+                        console.log("priset är:  "+ price + "taget från: "+products[el].price);
+                    }
+                }
+            }            //Kod för searchbaren slut!
+
+
+            $(".gameTitle").text(name);
+            $(".gamePrice").text(price + "kr");
+            $(".gameImg").attr("src", source);
+            $(".gameInfo").text(gameInfo);
+            $("#myModal").show();
+
+            displayComments();
+
+        }
+    );
+
+
+    $(".closeModal").on("click", function () {
+        $("#myModal").hide();
+    });
+
+    $("#commentBtn").on("click", function (e) {
+
+        comments = comments || [];
+
+        e.preventDefault();
+        var commentValue = $("#commentArea");
+
+        comments.push(commentValue.val());
+        commentValue.val('').blur();
+        saveComment();
+
+    });
+
+
 });
 
 function totalItemBtn() {
-    var btn=$('#totalItems');
-    if (!(cart.length===0)) {
+    var btn = $('#totalItems');
+    if (!(cart.length === 0)) {
         if (!(btn.text())) {
             var totalItems = "<button id='totalItems' disabled></button>";
             $('.headerCheckout').append(totalItems);
             btn = $('#totalItems');
         }
         btn.text(numberOfItems());
-    }else{
+    } else {
         btn.remove();
     }
-    btn.disabled=true;
+    btn.disabled = true;
+}
+
+
+function searchBar() {
 }
 
 loadPage();
+
+
 

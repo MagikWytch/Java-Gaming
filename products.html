@@ -11,7 +11,7 @@
     <title>PC | PC spel, Action, Shooter, Adventure, Drama | Java Gaming</title>
 
     <script src="jquery-3.2.1.js"></script>
-
+    <script src="js.js"></script>
 
 
 </head>
@@ -27,7 +27,7 @@
         <a href="index.html"> <img id="logo" src="images/logo.png"> </a>
         <section id="searchContainer">
             <input id="searchBar" type="text" placeholder="Sök ..">
-            <img id="searchImg" class="button" src="images/search.png">
+            <img id="searchImg" class="button modalTrigger" src="images/search.png">
         </section>
     </section>
 
@@ -64,25 +64,44 @@
 
     <section id="main-content-box">
 
-        <ul>
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close closeModal">&times;</span>
+                <p class="gameTitle"></p>
+                <p class="gamePrice">Some text in the Modal..</p>
+                <img class="gameImg" src=""> </img>
+                <p class="gameInfo">Some text in the Modal..</p>
+                <div class = "modalTextArea">
+                    <textarea id="commentArea" rows="4" cols="30" maxlength="255" placeholder="Enter your comment here"></textarea>
+                    <button  id="commentBtn">Submit Comment</button>
+                    <p><b>Comments:</b></p><hr>
+
+                </div>
+
+            </div>
+
+        </div>
+        <ul class="gameList">
 
             <li>
 
                 <section class="description-box">
 
                     <section class="image-box">
-                        <a href=""><img alt="Assassin's Creed: Origins"
+                        <a href="" class="modalTrigger" ><img alt="Assassin's Creed: Origins"
                                         src="images/products-img/products-Assassins-Creed-Origins.jpg"></a>
                     </section>
 
                     <section class="info-box">
-                        <a href=""><h4>Assassin's Creed - Origins</h4></a>
+                        <a href="" class="modalTrigger" ><h4>Assassin's Creed - Origins</h4></a>
                         <p>(PC)</p>
                     </section>
 
                     <section class="price-and-add-box">
                         <p>599kr</p>
-                        <section data-name="Assassin's Creed" data-target="images/products-img/products-Assassins-Creed-Origins.jpg" data-price=599 class="button add-button addBtn">
+                        <section data-name="Assassin's Creed" data-target="images/products-img/products-Assassins-Creed-Origins.jpg" data-price=599 data-gameInfo ="Assassin's Creed Origins is an action-adventure video game developed by Ubisoft Montreal and published by Ubisoft. It is the tenth major installment in the Assassin's Creed series and the successor to 2015's Assassin's Creed Syndicate. It was released worldwide for Microsoft Windows, PlayStation 4, and Xbox One on October 27, 2017." class="button add-button addBtn modalBox">
                             <a href="">+</a>
                         </section>
                     </section>
@@ -94,19 +113,19 @@
             <li>
                 <section class="description-box">
 
-                    <section class="image-box">
-                        <a href=""><img alt="Call Of Duty: WWII"
+                    <section class="image-box ">
+                        <a href="" class="modalTrigger" ><img alt="Call Of Duty: WWII"
                                         src="images/products-img/products-Call-Of-Duty-WWII.png"></a>
                     </section>
 
-                    <section class="info-box">
-                        <a href=""><h4>Call Of Duty - WWII</h4></a>
+                    <section class="info-box ">
+                        <a href="" class="modalTrigger" ><h4>Call Of Duty - WWII</h4></a>
                         <p>(PC)</p>
                     </section>
 
                     <section class="price-and-add-box">
                         <p>599kr</p>
-                        <section data-name="Call Of Duty" data-target="images/products-img/products-Call-Of-Duty-WWII.png" data-price=599   class="button add-button addBtn">
+                        <section data-name="Call Of Duty" data-target="images/products-img/products-Call-Of-Duty-WWII.png" data-price=599 data-gameInfo ="Call of Duty: WWII is a first-person shooter video game developed by Sledgehammer Games and published by Activision. It is the fourteenth main installment in the Call of Duty series and was released worldwide on November 3, 2017 for Microsoft Windows, PlayStation 4 and Xbox One."   class="button add-button addBtn modalBox">
                             <a  href="">+</a>
                         </section>
                     </section>
@@ -120,17 +139,17 @@
                 <section class="description-box">
 
                     <section class="image-box">
-                        <a href=""><img alt="Destiny 2" src="images/products-img/products-Destiny-2.png"/></a>
+                        <a href="" class="modalTrigger" ><img alt="Destiny 2" src="images/products-img/products-Destiny-2.png"/></a>
                     </section>
 
                     <section class="info-box">
-                        <a href=""><h4>Destiny 2</h4></a>
+                        <a href="" class="modalTrigger" ><h4>Destiny 2</h4></a>
                         <p>(PC)</p>
                     </section>
 
                     <section class="price-and-add-box">
                         <p>499kr</p>
-                        <section  data-target="images/products-img/products-Destiny-2.png" data-name="Destiny 2" data-price=499    class="button add-button addBtn">
+                        <section  data-target="images/products-img/products-Destiny-2.png" data-name="Destiny 2" data-price=499 data-gameInfo ="Destiny 2 is an online-only multiplayer first-person shooter video game developed by Bungie and published by Activision. It was released for PlayStation 4 and Xbox One on September 6, 2017, followed by a Microsoft Windows version the following month."     class="button add-button addBtn modalBox">
                             <a href="" id="go">+</a>
                         </section>
                     </section>
@@ -144,17 +163,17 @@
                 <section class="description-box">
 
                     <section class="image-box">
-                        <a href=""><img alt="DOOM 4" src="images/products-img/products-DOOM-4.jpg"/></a>
+                        <a href="" class="modalTrigger" ><img alt="DOOM 4" src="images/products-img/products-DOOM-4.jpg"/></a>
                     </section>
 
                     <section class="info-box">
-                        <a href=""><h4>DOOM 4</h4></a>
+                        <a href="" class="modalTrigger" ><h4>DOOM 4</h4></a>
                         <p>(PC)</p>
                     </section>
 
                     <section class="price-and-add-box">
                         <p>195kr</p>
-                        <section data-target="images/products-img/products-DOOM-4.jpg" data-name="DOOM 4" data-price=195   class="button add-button addBtn">
+                        <section data-target="images/products-img/products-DOOM-4.jpg" data-name="DOOM 4" data-price=195 data-gameInfo ="Doom is a first-person shooter video game developed by id Software and published by Bethesda Softworks. A reboot of the Doom franchise, it is the fourth title in the main series and the first major installment since Doom 3 in 2004."    class="button add-button addBtn modalBox">
                             <a href="">+</a>
                         </section>
                     </section>
@@ -168,17 +187,17 @@
                 <section class="description-box">
 
                     <section class="image-box">
-                        <a href=""><img alt="Fallout 4" src="images/products-img/products-Fallout_4.jpg"/></a>
+                        <a href="" class="modalTrigger" ><img alt="Fallout 4" src="images/products-img/products-Fallout_4.jpg"/></a>
                     </section>
 
                     <section class="info-box">
-                        <a href=""><h4>Fallout 4</h4></a>
+                        <a href="" class="modalTrigger" ><h4>Fallout 4</h4></a>
                         <p>(PC)</p>
                     </section>
 
                     <section class="price-and-add-box">
                         <p>99kr</p>
-                        <section data-target="images/products-img/products-Fallout_4.jpg"  data-name="Fallout 4" data-price=99   class="button add-button addBtn">
+                        <section data-target="images/products-img/products-Fallout_4.jpg"  data-name="Fallout 4" data-price=99 data-gameInfo ="Fallout 4 is an action role-playing video game developed by Bethesda Game Studios and published by Bethesda Softworks. It is the fifth major installment in the Fallout series, and was released worldwide on November 10, 2015, for Microsoft Windows, PlayStation 4 and Xbox One."    class="button add-button addBtn modalBox">
                             <a href="">+</a>
                         </section>
                     </section>
@@ -192,18 +211,18 @@
                 <section class="description-box">
 
                     <section class="image-box">
-                        <a href=""><img alt="Grand Theft Auto V"
+                        <a href="" class="modalTrigger" ><img alt="Grand Theft Auto V"
                                         src="images/products-img/products-Grand_Theft_Auto_v.jpg"/></a>
                     </section>
 
                     <section class="info-box">
-                        <a href=""><h4>Grand Theft Auto V</h4></a>
+                        <a href="" class="modalTrigger" ><h4>Grand Theft Auto V</h4></a>
                         <p>(PC)</p>
                     </section>
 
                     <section class="price-and-add-box">
                         <p>499kr</p>
-                        <section  data-target="images/products-img/products-Grand_Theft_Auto_v.jpg" data-name="Grand Theft Auto V" data-price=499 class="button add-button addBtn">
+                        <section  data-target="images/products-img/products-Grand_Theft_Auto_v.jpg" data-name="Grand Theft Auto V" data-price=499  data-gameInfo ="Grand Theft Auto V is an action-adventure video game developed by Rockstar North and published by Rockstar Games. It was released in September 2013 for PlayStation 3 and Xbox 360, in November 2014 for PlayStation 4 and Xbox One, and in April 2015 for Microsoft Windows." class="button add-button addBtn modalBox">
                             <a href="">+</a>
                         </section>
                     </section>
@@ -217,18 +236,18 @@
                 <section class="description-box">
 
                     <section class="image-box">
-                        <a href=""><img alt="Star Wars Battlefront II"
+                        <a href="" class="modalTrigger" ><img alt="Star Wars Battlefront II"
                                         src="images/products-img/products-Starwars-Battlefront-II.jpg"/></a>
                     </section>
 
                     <section class="info-box">
-                        <a href=""><h4>Star Wars Battlefront II</h4></a>
+                        <a href="" class="modalTrigger" ><h4>Star Wars Battlefront II</h4></a>
                         <p>(PC)</p>
                     </section>
 
                     <section class="price-and-add-box">
                         <p>499kr</p>
-                        <section   data-target="images/products-img/products-Starwars-Battlefront-II.jpg" data-name="Star Wars Battlefront II" data-price="499"   class="button add-button addBtn">
+                        <section   data-target="images/products-img/products-Starwars-Battlefront-II.jpg" data-name="Star Wars Battlefront II" data-price="499"  data-gameInfo ="Star Wars Battlefront II is an action shooter video game based on the Star Wars film franchise. It is the fourth major installment of the Star Wars: Battlefront series and seventh overall, and a sequel to the 2015 reboot of the series."   class="button add-button addBtn modalBox">
                             <a href="">+</a>
                         </section>
                     </section>
