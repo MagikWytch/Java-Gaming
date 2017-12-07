@@ -198,12 +198,13 @@ function saveComment() {
 }
 
 function displayComments() {
-
+    comments = JSON.parse(localStorage.getItem("commentStore"));
+    $("#commentContainer").find('p').remove();
     for (var el in comments) {
+    console.log("in for comments");
+        var output = "<p class='commentP'>" + comments[el] + "</p><hr>";
 
-        var output = "<p>" + comments[el] + "</p><hr>";
-
-        $(".modalTextArea").append(output);
+        $("#commentContainer").append(output);
     }
 
 }
@@ -222,7 +223,7 @@ var modularDiv = "<div id=\"myModal\" class=\"modal\">\n" +
     "                    <textarea id=\"commentArea\" rows=\"4\" cols=\"30\" maxlength=\"255\" placeholder=\"Enter your comment here\"></textarea>\n" +
     "                    <button  id=\"commentBtn\">Submit Comment</button>\n" +
     "                    <p><b>Comments:</b></p><hr>\n" +
-    "\n" +
+    "\n                     <div id='commentContainer'></div>       " +
     "                </div>\n" +
     "\n" +
     "            </div>\n" +
