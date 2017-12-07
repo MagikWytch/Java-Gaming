@@ -183,12 +183,13 @@ function displayComments() {
 }
 
 
-
-
 $(function () {
 
     $(".shipping").on("click", function () {
-        $(this)
+        $("message").remove();
+        var cost = costOfCart() + $(this).data("price");
+        var message = "<p>Total kostnad:</p>" + cost;
+        $("table").after().append(message);
     });
 
 
@@ -316,7 +317,6 @@ function totalItemBtn() {
 }
 
 
-<<<<<<< HEAD
 function searchBar() {
 }
 
@@ -329,8 +329,7 @@ function searchBar() {
 //   Medusas Code for Checkout
 // ******************************
 
-=======
->>>>>>> c9043d44efb76b8b62dd441a40006f7aa9e98bcb
+
 loadPage();
 
 
