@@ -186,10 +186,10 @@ function displayComments() {
 $(function () {
 
     $(".shipping").on("click", function () {
-        $("message").remove();
         var cost = costOfCart() + $(this).data("price");
-        var message = "<p>Total kostnad:</p>" + cost;
-        $("table").after().append(message);
+        var message = "Total kostnad: " + cost;
+
+        $("table").append(message);
     });
 
 
