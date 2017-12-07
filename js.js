@@ -127,7 +127,6 @@ function saveCart() {
 function loadPage() {
     cart = JSON.parse(localStorage.getItem("shoppingCart"));
     totalItemBtn();
-    searchBar();
 }
 
 
@@ -176,12 +175,14 @@ function displayComments() {
 
     for (var el in comments) {
 
-        var output = "<p>" + comments[el] + "</p><hr>"
+        var output = "<p>" + comments[el] + "</p><hr>";
 
         $(".modalTextArea").append(output);
     }
 
 }
+
+
 
 
 $(function () {
@@ -240,28 +241,6 @@ $(function () {
     $(".modalTrigger").on("click", function (e) {
             e.preventDefault();
 
-            var modularDiv = "<div id=\"myModal\" class=\"modal\">\n" +
-                "\n" +
-                "            <!-- Modal content -->\n" +
-                "            <div class=\"modal-content\">\n" +
-                "                <span class=\"close closeModal\">&times;</span>\n" +
-                "                <p class=\"gameTitle\"></p>\n" +
-                "                <p class=\"gamePrice\">Some text in the Modal..</p>\n" +
-                "                <img class=\"gameImg\" src=\"\"> </img>\n" +
-                "                <p class=\"gameInfo\">Some text in the Modal..</p>\n" +
-                "                <div class = \"modalTextArea\">\n" +
-                "                    <textarea id=\"commentArea\" rows=\"4\" cols=\"30\" maxlength=\"255\" placeholder=\"Enter your comment here\"></textarea>\n" +
-                "                    <button  id=\"commentBtn\">Submit Comment</button>\n" +
-                "                    <p><b>Comments:</b></p><hr>\n" +
-                "\n" +
-                "                </div>\n" +
-                "\n" +
-                "            </div>\n" +
-                "\n" +
-                "        </div>";
-
-            $('main').append(modularDiv);
-
             var finder = $(this).closest("li").find(".modalBox");
 
             var name = finder.attr("data-name");
@@ -285,7 +264,8 @@ $(function () {
                         console.log("priset är:  " + price + "taget från: " + products[el].price);
                     }
                 }
-            }            //Kod för searchbaren slut!
+            }
+            //Kod för searchbaren slut!
 
 
             $(".gameTitle").text(name);
@@ -336,6 +316,7 @@ function totalItemBtn() {
 }
 
 
+<<<<<<< HEAD
 function searchBar() {
 }
 
@@ -348,6 +329,8 @@ function searchBar() {
 //   Medusas Code for Checkout
 // ******************************
 
+=======
+>>>>>>> c9043d44efb76b8b62dd441a40006f7aa9e98bcb
 loadPage();
 
 
