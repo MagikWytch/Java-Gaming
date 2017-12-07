@@ -167,31 +167,7 @@ function displayCart() {
 
 }
 
-function displayCart() {
 
-
-    for (var el in cart) {
-
-
-        var output = "<tr class=\"listItem\">\n" +
-            "                    <td><img class=\"prodImg\" src='" + cart[el].source + "'></td>\n" +
-            "                    <td><h4 class=\"title\">" + cart[el].name + "</h4>\n" +
-            "                        <p>(PC)</p></td>\n" +
-            "                    <td><button class='add'>+</button><p class=\"count\">" + cart[el].count + "</p>\n" +
-            "                        <button class='sub'>-</button></td>\n" +
-            "                    <td><p class=\"price\">" + cart[el].price + "</p>\n" +
-            "                        <p>SEK</p></td>\n" +
-            "                    <td>\n" +
-            "                        <section class=\"button add-button remBtn\">\n" +
-            "                            <a href=\"\">X</a>\n" +
-            "                        </section>\n" +
-            "                    </td>\n" +
-            "                </tr>";
-        $('.table-body').append(output);
-    }
-    $('#total').text(costOfCart());
-
-}
 
 function saveComment() {
     localStorage.setItem("commentStore", JSON.stringify(comments));
@@ -209,36 +185,13 @@ function displayComments() {
 }
 
 
-var modularDiv = "<div id=\"myModal\" class=\"modal\">\n" +
-    "\n" +
-    "            <!-- Modal content -->\n" +
-    "            <div class=\"modal-content\">\n" +
-    "                <span class=\"close closeModal\">&times;</span>\n" +
-    "                <p class=\"gameTitle\"></p>\n" +
-    "                <p class=\"gamePrice\">Some text in the Modal..</p>\n" +
-    "                <img class=\"gameImg\" src=\"\"> </img>\n" +
-    "                <p class=\"gameInfo\">Some text in the Modal..</p>\n" +
-    "                <div class = \"modalTextArea\">\n" +
-    "                    <textarea id=\"commentArea\" rows=\"4\" cols=\"30\" maxlength=\"255\" placeholder=\"Enter your comment here\"></textarea>\n" +
-    "                    <button  id=\"commentBtn\">Submit Comment</button>\n" +
-    "                    <p><b>Comments:</b></p><hr>\n" +
-    "\n" +
-    "                </div>\n" +
-    "\n" +
-    "            </div>\n" +
-    "\n" +
-    "        </div>";
-
-$('main').append(modularDiv);
-
-
 $(function () {
 
     $(".shipping").on("click", function () {
+        $("message").remove();
         var cost = costOfCart() + $(this).data("price");
-        var message = "Total kostnad: " + cost;
-
-        $("table").append(message);
+        var message = "<p>Total kostnad:</p>" + cost;
+        $("table").after().append(message);
     });
 
 
