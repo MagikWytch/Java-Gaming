@@ -6,7 +6,8 @@ var products = [
         name: "Assassin's Creed",
         price: 599,
         source: "images/products-img/products-Assassins-Creed-Origins.jpg",
-        info: "Assassin's Creed Origins is an action-adventure video game developed by Ubisoft Montreal and published by Ubisoft. It is the tenth major installment in the Assassin's Creed series and the successor to 2015's Assassin's Creed Syndicate. It was released worldwide for Microsoft Windows, PlayStation 4, and Xbox One on October 27, 2017."
+        info: "Assassin's Creed Origins is an action-adventure video game developed by Ubisoft Montreal and published by Ubisoft. It is the tenth major installment in the Assassin's Creed series and the successor to 2015's Assassin's Creed Syndicate. It was released worldwide for Microsoft Windows, PlayStation 4, and Xbox One on October 27, 2017.",
+        comments:[]
     },
     {
         name: "Call Of Duty",
@@ -167,41 +168,15 @@ function displayCart() {
 
 }
 
-function displayCart() {
-
-
-    for (var el in cart) {
-
-
-        var output = "<tr class=\"listItem\">\n" +
-            "                    <td><img class=\"prodImg\" src='" + cart[el].source + "'></td>\n" +
-            "                    <td><h4 class=\"title\">" + cart[el].name + "</h4>\n" +
-            "                        <p>(PC)</p></td>\n" +
-            "                    <td><button class='add'>+</button><p class=\"count\">" + cart[el].count + "</p>\n" +
-            "                        <button class='sub'>-</button></td>\n" +
-            "                    <td><p class=\"price\">" + cart[el].price + "</p>\n" +
-            "                        <p>SEK</p></td>\n" +
-            "                    <td>\n" +
-            "                        <section class=\"button add-button remBtn\">\n" +
-            "                            <a href=\"\">X</a>\n" +
-            "                        </section>\n" +
-            "                    </td>\n" +
-            "                </tr>";
-        $('.table-body').append(output);
-    }
-    $('#total').text(costOfCart());
-
-}
-
 function saveComment() {
     localStorage.setItem("commentStore", JSON.stringify(comments));
 }
 
 function displayComments() {
     comments = JSON.parse(localStorage.getItem("commentStore"));
-    $("#commentContainer").find('p').remove();
+    $("#commentContainer").find('.commentP, hr').remove();
+
     for (var el in comments) {
-    console.log("in for comments");
         var output = "<p class='commentP'>" + comments[el] + "</p><hr>";
 
         $("#commentContainer").append(output);
@@ -289,7 +264,6 @@ $(function () {
 
     $(".modalTrigger").on("click", function (e) {
             e.preventDefault();
-
             var finder = $(this).closest("li").find(".modalBox");
 
             var name = finder.attr("data-name");
@@ -300,17 +274,13 @@ $(function () {
             //Lite kod för searchbaren!
 
             if ($(this).hasClass('button')) {
-                console.log("klickat på search");
                 var searchFor = $('#searchBar').val();
                 for (var el in products) {
-                    console.log("for el in products");
                     if (products[el].name === searchFor) {
-                        console.log("hittat namnet: " + products[el].name);
                         name = products[el].name;
                         price = products[el].price;
                         source = products[el].source;
                         gameInfo = products[el].info;
-                        console.log("priset är:  " + price + "taget från: " + products[el].price);
                     }
                 }
             }
@@ -351,7 +321,7 @@ $(function () {
 
 function totalItemBtn() {
     var btn = $('#totalItems');
-    if (!(cart.length === 0)) {
+    if (!(cart == 0)) {
         if (!(btn.text())) {
             var totalItems = "<button id='totalItems' disabled></button>";
             $('.headerCheckout').append(totalItems);
@@ -359,7 +329,7 @@ function totalItemBtn() {
         }
         btn.text(numberOfItems());
     } else {
-        btn.remove();
+        $('#totalItems').remove();
     }
     btn.disabled = true;
 }
