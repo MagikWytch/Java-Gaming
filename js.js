@@ -216,6 +216,11 @@ var modularDiv = "<div id=\"myModal\" class=\"modal\">\n" +
 
 $('main').append(modularDiv);
 
+var test = function() {
+    $("#name2").text(personalDetails.firstName);
+    alert(personalDetails.firstName);
+};
+
 
 $(function () {
 
@@ -226,6 +231,7 @@ $(function () {
         var shippingName = $(this).val();
         $("#delivery2").text(shippingName);
     });
+
 
 
     $("#fieldFirstName").keyup(function () {
