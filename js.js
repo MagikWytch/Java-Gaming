@@ -136,6 +136,7 @@ function saveCart() {
 
 function loadPage() {
     cart = JSON.parse(localStorage.getItem("shoppingCart"));
+    personalDetails = JSON.parse(localStorage.getItem("details"));
     totalItemBtn();
 }
 
@@ -181,6 +182,12 @@ function saveComment() {
     localStorage.setItem("commentStore", JSON.stringify(comments));
 }
 
+function savePersonalInfo() {
+    localStorage.setItem("details", JSON.stringify(personalDetails));
+}
+
+
+
 function displayComments() {
     comments = JSON.parse(localStorage.getItem("commentStore"));
     $("#commentContainer").find('.commentP, hr').remove();
@@ -217,8 +224,14 @@ var modularDiv = "<div id=\"myModal\" class=\"modal\">\n" +
 $('main').append(modularDiv);
 
 var test = function() {
-    $("#name2").text(personalDetails.firstName);
-    alert(personalDetails.firstName);
+    $("#name2").text(personalDetails.lastName+" "+personalDetails.firstName);
+    $("#adress2").text(personalDetails.adress);
+    $("#zipCity").text(personalDetails.zipCode+" "+personalDetails.city);
+    $("#email2").text(personalDetails.email);
+    $("#delivery2").text(personalDetails.zipCode);
+
+
+
 };
 
 
@@ -236,29 +249,36 @@ $(function () {
 
     $("#fieldFirstName").keyup(function () {
         personalDetails.firstName = $("#fieldFirstName").val();
+        savePersonalInfo();
     });
 
     $("#fieldLastName").keyup(function () {
         personalDetails.lastName = $("#fieldLastName").val();
+        savePersonalInfo();
     });
 
     $("#fieldAdress").keyup(function () {
         personalDetails.adress = $("#fieldAdress").val();
+        savePersonalInfo();
     });
 
     $("#fieldCity").keyup(function () {
         personalDetails.city = $("#fieldCity").val();
+        savePersonalInfo();
     });
 
     $("#fieldZipCode").keyup(function () {
         personalDetails.zipCode = $("#fieldZipCode").val();
+        savePersonalInfo();
     });
 
     $("#fieldCountry").keyup(function () {
         personalDetails.country = $("#fieldCountry").val();
+        savePersonalInfo();
     });
     $("#fieldEmail").keyup(function () {
         personalDetails.email = $("#fieldEmail").val();
+        savePersonalInfo();
     });
 
 
