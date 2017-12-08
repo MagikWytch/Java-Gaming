@@ -1,5 +1,14 @@
 var cart = [];
 var comments = [];
+var personalDetails = {
+    firstName: "",
+    lastName: "",
+    adress: "",
+    city: "",
+    zipCode: "",
+    country: "",
+    email: ""
+};
 
 var products = [
     {
@@ -237,6 +246,37 @@ $(function () {
     $(".shipping").on("click", function () {
         var cost = costOfCart() + $(this).data("price");
         $("#costWithShipping").text("Total kostnad: " + cost);
+
+        var shippingName = $(this).val();
+        $("#delivery2").text(shippingName);
+    });
+
+
+    $("#fieldFirstName").keyup(function () {
+        personalDetails.firstName = $("#fieldFirstName").val();
+    });
+
+    $("#fieldLastName").keyup(function () {
+        personalDetails.lastName = $("#fieldLastName").val();
+    });
+
+    $("#fieldAdress").keyup(function () {
+        personalDetails.adress = $("#fieldAdress").val();
+    });
+
+    $("#fieldCity").keyup(function () {
+        personalDetails.city = $("#fieldCity").val();
+    });
+
+    $("#fieldZipCode").keyup(function () {
+        personalDetails.zipCode = $("#fieldZipCode").val();
+    });
+
+    $("#fieldCountry").keyup(function () {
+        personalDetails.country = $("#fieldCountry").val();
+    });
+    $("#fieldEmail").keyup(function () {
+        personalDetails.email = $("#fieldEmail").val();
     });
 
 

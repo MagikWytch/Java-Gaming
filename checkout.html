@@ -58,7 +58,7 @@
             <table>
                 <tr>
                     <td>Förnamn</td>
-                    <td><input id="fieldName" type="text" name="fname" pattern="[A-ZÅÄÖ][a-zåäö]+" minlength="3"
+                    <td><input id="fieldFirstName" type="text" name="fname" pattern="[A-ZÅÄÖ][a-zåäö]+" minlength="3"
                                placeholder="Ditt namn .."
                                title="Förnamn, börja med stor bokstav. Endast bokstäver tillåtna" required></td>
                 </tr>
@@ -100,13 +100,13 @@
                         <h2>Frakt</h2></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input class="shipping" data-price="0" type="radio" name="shipping" checked>Posten - Fraktfritt</td>
+                    <td colspan="2"><input class="shipping" data-price="0" value="Posten - Fraktfritt" type="radio" name="shipping" checked>Posten - Fraktfritt</td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input class="shipping" data-price="50" type="radio" name="shipping">Schenker Express - 50kr</td>
+                    <td colspan="2"><input class="shipping" data-price="50" value="Schenker Express" type="radio" name="shipping">Schenker Express - 50kr</td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input class="shipping" data-price="100" type="radio" name="shipping">DHL SlowPackage - 100kr</td>
+                    <td colspan="2"><input class="shipping" data-price="100" value="DHL Slow Package" type="radio" name="shipping">DHL SlowPackage - 100kr</td>
                 </tr>
                 <tr>
                 </tr>
