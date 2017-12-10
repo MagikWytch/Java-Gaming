@@ -16,7 +16,7 @@ var products = [
         price: 599,
         source: "images/products-img/products-Assassins-Creed-Origins.jpg",
         info: "Assassin's Creed Origins is an action-adventure video game developed by Ubisoft Montreal and published by Ubisoft. It is the tenth major installment in the Assassin's Creed series and the successor to 2015's Assassin's Creed Syndicate. It was released worldwide for Microsoft Windows, PlayStation 4, and Xbox One on October 27, 2017.",
-        comments:[]
+        comments: []
     },
     {
         name: "Call Of Duty",
@@ -187,7 +187,6 @@ function savePersonalInfo() {
 }
 
 
-
 function displayComments() {
     comments = JSON.parse(localStorage.getItem("commentStore"));
     $("#commentContainer").find('.commentP, hr').remove();
@@ -221,18 +220,18 @@ var modularDiv = "<div id=\"myModal\" class=\"modal\">\n" +
     "\n" +
     "        </div>";
 
-$('main').append(modularDiv);
+$('main').append(modularDiv); //För att slippa lägga till denna i varje html fil manuellt..
 
-var test = function() {
-    $("#name2").text(personalDetails.lastName+" "+personalDetails.firstName);
+var test = function () {
+    $("#name2").text(personalDetails.lastName + " " + personalDetails.firstName);
     $("#adress2").text(personalDetails.adress);
-    $("#zipCity").text(personalDetails.zipCode+" "+personalDetails.city);
+    $("#zipCity").text(personalDetails.zipCode + " " + personalDetails.city);
     $("#email2").text(personalDetails.email);
     $("#delivery2").text(personalDetails.zipCode);
 
 
-
 };
+
 
 
 $(function () {
@@ -244,7 +243,6 @@ $(function () {
         var shippingName = $(this).val();
         $("#delivery2").text(shippingName);
     });
-
 
 
     $("#fieldFirstName").keyup(function () {
@@ -340,27 +338,41 @@ $(function () {
             //Lite kod för searchbaren!
 
             if ($(this).hasClass('button')) {
-                var searchFor = $('#searchBar').val();
+                var searchFor = $('#searchBar').val().toLowerCase();
+                var found = false;
                 for (var el in products) {
-                    if (products[el].name === searchFor) {
+                    if (products[el].name.toLowerCase() === searchFor) {
+                        found = true;
                         name = products[el].name;
                         price = products[el].price;
                         source = products[el].source;
                         gameInfo = products[el].info;
+
+                        $(".gameTitle").text(name);
+                        $(".gamePrice").text(price + "kr");
+                        $(".gameImg").attr("src", source);
+                        $(".gameInfo").text(gameInfo);
+                        $("#myModal").show();
+
+
                     }
                 }
+                if (found === false) {
+                    alert("Hittade inga spel med det namnet");
+                }
+            } else {
+
+                //Kod för searchbaren slut!
+
+
+                $(".gameTitle").text(name);
+                $(".gamePrice").text(price + "kr");
+                $(".gameImg").attr("src", source);
+                $(".gameInfo").text(gameInfo);
+                $("#myModal").show();
+
+                displayComments();
             }
-            //Kod för searchbaren slut!
-
-
-            $(".gameTitle").text(name);
-            $(".gamePrice").text(price + "kr");
-            $(".gameImg").attr("src", source);
-            $(".gameInfo").text(gameInfo);
-            $("#myModal").show();
-
-            displayComments();
-
         }
     );
 
