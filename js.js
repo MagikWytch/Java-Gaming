@@ -246,35 +246,42 @@ $(function () {
 
 
     $("#fieldFirstName").keyup(function () {
+        personalDetails = personalDetails || {};
         personalDetails.firstName = $("#fieldFirstName").val();
         savePersonalInfo();
     });
 
     $("#fieldLastName").keyup(function () {
+        personalDetails = personalDetails || {};
         personalDetails.lastName = $("#fieldLastName").val();
         savePersonalInfo();
     });
 
     $("#fieldAdress").keyup(function () {
+        personalDetails = personalDetails || {};
         personalDetails.adress = $("#fieldAdress").val();
         savePersonalInfo();
     });
 
     $("#fieldCity").keyup(function () {
+        personalDetails = personalDetails || {};
         personalDetails.city = $("#fieldCity").val();
         savePersonalInfo();
     });
 
     $("#fieldZipCode").keyup(function () {
+        personalDetails = personalDetails || {};
         personalDetails.zipCode = $("#fieldZipCode").val();
         savePersonalInfo();
     });
 
     $("#fieldCountry").keyup(function () {
+        personalDetails = personalDetails || {};
         personalDetails.country = $("#fieldCountry").val();
         savePersonalInfo();
     });
     $("#fieldEmail").keyup(function () {
+        personalDetails = personalDetails || {};
         personalDetails.email = $("#fieldEmail").val();
         savePersonalInfo();
     });
